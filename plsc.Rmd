@@ -49,9 +49,9 @@ library(kableExtra)
 PATH = "C:/_ALEX_/_RESEARCH/_workshops/BrainHack2025/abide-plsc"
 
 # load datasets
-covar_df <- read_csv(sprintf("%s/derivatives/gn-reduced/covariate.csv", PATH))
-socio_df <- read_csv(sprintf("%s/derivatives/gn-reduced/sociocult.csv", PATH))
-rsfc_df <- read_csv(sprintf("%s/derivatives/gn-reduced/rsfc.csv", PATH))
+covar_df <- read_csv(sprintf("%s/derivatives/gn-reduced/simulated_covariate.csv", PATH))
+socio_df <- read_csv(sprintf("%s/derivatives/gn-reduced/simulated_sociocult.csv", PATH))
+rsfc_df <- read_csv(sprintf("%s/derivatives/gn-reduced/simulated_rsfc.csv", PATH))
 # phy_df <- read_csv(sprintf("%s/derivatives/phyhealth.csv", PATH))
 
 fig_dir <- sprintf("%s/derivatives/gn-reduced/figures/", PATH)
