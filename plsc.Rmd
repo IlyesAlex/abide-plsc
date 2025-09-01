@@ -22,22 +22,22 @@ rm(list = ls()) # Clear environment
 graphics.off() # Clear all plots
 
 # Load necessary libraries
-library(tidyverse) # Core tidyverse packages
-library(ExPosition) # Multivariate data analysis
-library(TExPosition) # Tensor-based ExPosition analysis
+library(tidyverse)      # Core tidyverse packages
+library(ExPosition)     # Multivariate data analysis
+library(TExPosition)    # Tensor-based ExPosition analysis
 # library(TInPosition)  # Uncomment if needed and installed
-library(PTCA4CATA) # Permutation Tests for CATA
-library(data4PCCAR) # Example datasets for PCA
-library(plyr) # Data manipulation (load first to avoid conflicts)
-library(dplyr) # Data manipulation
-library(corrplot) # Correlation plots
-library(ggplot2) # Data visualization
-library(cowplot) # Plot arrangement
-library(readr) # Reading data files
-library(gridExtra) # Arrange grid-based visualizations
-library(grid) # Low-level graphics system
-library(here) # Relative file paths
-library(psych) # Psychometric tools
+library(PTCA4CATA)      # Permutation Tests for CATA
+library(data4PCCAR)     # Example datasetsfor PCA
+library(plyr)           # Data manipulation (load first to avoid conflicts)
+library(dplyr)          # Data manipulation
+library(corrplot)       # Correlation plots
+library(ggplot2)        # Data visualization
+library(cowplot)        # Plot arrangement
+library(readr)          # Reading data files
+library(gridExtra)      # Arrange grid-based visualizations
+library(grid)           # Low-level graphics system
+library(here)           # Relative file paths
+library(psych)          # Psychometric tools
 library(car)
 library(kableExtra)
 ```
@@ -46,15 +46,16 @@ library(kableExtra)
 **Data :**  cleaned data, pre processed and grouped into two different datasets - one for RSI measures and other for sociocultural measures from ABCD data.
 
 ```{r}
+PATH = "C:/_ALEX_/_RESEARCH/_workshops/BrainHack2025/abide-plsc"
+
 # load datasets
-covar_df <- read_csv("/Users/chloehampson/Desktop/projects/abcd-plsc/derivatives/gn-reduced/covariate.csv")
-socio_df <- read_csv("/Users/chloehampson/Desktop/projects/abcd-plsc/derivatives/gn-reduced/sociocult.csv")
-rsfc_df <- read_csv("/Users/chloehampson/Desktop/projects/abcd-plsc/derivatives/gn-reduced/rsfc.csv")
-# phy_df <- read_csv("/Users/chloehampson/Desktop/projects/abcd-plsc/derivatives/phyhealth.csv")
+covar_df <- read_csv(sprintf("%s/derivatives/gn-reduced/covariate.csv", PATH))
+socio_df <- read_csv(sprintf("%s/derivatives/gn-reduced/sociocult.csv", PATH))
+rsfc_df <- read_csv(sprintf("%s/derivatives/gn-reduced/rsfc.csv", PATH))
+# phy_df <- read_csv(sprintf("%s/derivatives/phyhealth.csv", PATH))
 
-fig_dir <- "/Users/chloehampson/Desktop/projects/abcd-plsc/derivatives/gn-reduced/figures/"
-out_dir <- "/Users/chloehampson/Desktop/projects/abcd-plsc/derivatives/gn-reduced"
-
+fig_dir <- sprintf("%s/derivatives/gn-reduced/figures/", PATH)
+out_dir <- sprintf("%s/derivatives/gn-reduced/", PATH)
 
 ```
 
